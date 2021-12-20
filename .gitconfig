@@ -1,0 +1,28 @@
+[user]
+	name = Attila Szakacs
+	email = szakacs.attila96@gmail.com
+[core]
+	editor = code --wait
+[alias]
+	recon = rebase --continue
+	coma = commit -a --amend --no-edit
+	remaster = rebase -i master
+	sw = switch
+	co = checkout
+	st = status
+	d = diff
+	dt = difftool
+	cp = cherry-pick
+	br = branch
+	r = rebase
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[diff]
+	tool = vscode
+	algorithm = histogram
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[pull]
+	ff = only
