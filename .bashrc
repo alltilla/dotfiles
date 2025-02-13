@@ -1,5 +1,12 @@
 alias lsa='ls -alhFG --color'
 alias cdr='cd $(git rev-parse --show-toplevel)'
+alias c_cpp_properties='mkdir /home/alltilla/repos/syslog-ng/.vscode/ ; cp /home/alltilla/.c_cpp_properties.json /home/alltilla/repos/syslog-ng/.vscode/c_cpp_properties.json'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+PATH=/home/alltilla/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+CDPATH=.:/home/alltilla/repos
 
 HISTSIZE=99999
 HISTFILESIZE=99999
@@ -123,3 +130,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Created by `pipx` on 2023-05-13 20:31:31
+export PATH="$PATH:/home/alltilla/.local/bin"
+complete -C /home/alltilla/.local/bin/minio-mc minio-mc

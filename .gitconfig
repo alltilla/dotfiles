@@ -1,12 +1,14 @@
 [user]
 	name = Attila Szakacs
-	email = szakacs.attila96@gmail.com
+	email = attila.szakacs@axoflow.com
 [core]
 	editor = code --wait
+	excludesfile = /home/alltilla/.gitignore
 [alias]
 	recon = rebase --continue
 	coma = commit -a --amend --no-edit
 	remaster = rebase -i master
+	remain = rebase -i main
 	sw = switch
 	co = checkout
 	st = status
@@ -26,3 +28,8 @@
 	cmd = code --wait --diff $LOCAL $REMOTE
 [pull]
 	ff = only
+[gui]
+	commitmsgwidth = 70
+	tabsize = 4
+	fontui = -family \"Noto Sans\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"DejaVu Sans Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
