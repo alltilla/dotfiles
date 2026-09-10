@@ -1,9 +1,10 @@
 [user]
-	name = Attila Szakacs
+	name = Attila Szakacs-Bertok
 	email = attila.szakacs@axoflow.com
 [core]
 	editor = code --wait
-	excludesfile = /home/alltilla/.gitignore
+	excludesfile = ~/.gitignore
+	hooksPath = ~/.config/git/hooks
 [alias]
 	recon = rebase --continue
 	coma = commit -a --amend --no-edit
@@ -33,3 +34,10 @@
 	tabsize = 4
 	fontui = -family \"Noto Sans\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family \"DejaVu Sans Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	diffcontext = 10
+[credential "https://github.com"]
+	helper = 
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !gh auth git-credential
