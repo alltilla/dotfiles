@@ -1,0 +1,3 @@
+# fish machine state, not config
+fish/fish_variables
+fish/fishd.tmp.*
