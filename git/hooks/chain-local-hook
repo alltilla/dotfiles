@@ -1,0 +1,14 @@
+#!/bin/sh
+# Run this repo's own hook of the given name, with our arguments and stdin, and
+# report its exit code. Silent no-op when the repo has no such hook.
+#
+# --git-common-dir rather than $GIT_DIR: inside a linked worktree $GIT_DIR is
+# .git/worktrees/<name>, which holds no hooks directory.
+name=$1
+shift
+
+common_dir=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null) || exit 0
+hook="$common_dir/hooks/$name"
+[ -x "$hook" ] || exit 0
+
+exec "$hook" "$@"

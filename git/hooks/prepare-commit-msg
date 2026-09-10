@@ -1,0 +1,5 @@
+#!/bin/sh
+# Passthrough to this repo's own hook of the same name. Every hook name needs
+# one, because a global core.hooksPath replaces each repo's hooks directory
+# outright. See README.md.
+exec "$(dirname "$0")/chain-local-hook" "$(basename "$0")" "$@"
