@@ -20,3 +20,9 @@ set PATH $PATH $HOME/.local/bin
 
 # Added by codebase-memory-mcp install
 fish_add_path $HOME/.local/bin
+
+# macOS: /etc/paths.d appends Homebrew after /usr/bin, so Apple's bash 3.2 would
+# shadow the Homebrew one. Move Homebrew first, plus the ccache compiler masquerade.
+if test -d /opt/homebrew
+    fish_add_path -gm /opt/homebrew/opt/ccache/libexec /opt/homebrew/bin /opt/homebrew/sbin
+end
